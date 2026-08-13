@@ -9,7 +9,7 @@ THEME_DIR="$HOME_DIR/.config/omarchy/themes"
 THEME_REPO_URL="https://github.com/0leodev/omarchy-0xleovision-theme.git"
 THEME_NAME="0xleovision"
 
-WAYBAR_ISLAND_DIR="$HOME_DIR/.config/waybar"
+WAYBAR_ISLAND_DIR="$HOME_DIR/dotfiles/waybar/.config/waybar"
 WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island.git"
 WAYBAR_ISLAND_NAME="waybar-island"
 
