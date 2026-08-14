@@ -4,11 +4,34 @@ Shell scripts for fast personal setup.
 
 ## Installation
 
+### One line
+```bash
+cd ~ && git clone https://github.com/0leodev/omarchy-sh.git && cd omarchy-sh && chmod +x all.sh && ./all.sh
+```
+
+Done.
+
+---
+
+### Line by line
+
 ```bash
 cd ~
+```
+
+```bash
 git clone https://github.com/0leodev/omarchy-sh.git
+```
+
+```bash
 cd omarchy-sh
+```
+
+```bash
 chmod +x all.sh
+```
+
+```bash
 ./all.sh
 ```
 
