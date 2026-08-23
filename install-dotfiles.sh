@@ -13,7 +13,7 @@ WAYBAR_ISLAND_DIR="$HOME_DIR/dotfiles/waybar/.config/waybar"
 WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island.git"
 WAYBAR_ISLAND_NAME="waybar-island"
 
-CONFIGS=(fastfetch fish ghostty hypr nvim opencode uwsm waybar voxtype)
+CONFIGS=(fastfetch fish ghostty hypr nvim opencode swayosd uwsm waybar voxtype)
 
 echo "==> Installing stow"
 sudo pacman -S --needed --noconfirm stow
