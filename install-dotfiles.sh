@@ -9,9 +9,9 @@ THEME_DIR="$HOME_DIR/.config/omarchy/themes"
 THEME_REPO_URL="https://github.com/0leodev/omarchy-0xleovision-theme.git"
 THEME_NAME="0xleovision"
 
-WAYBAR_ISLAND_DIR="$HOME_DIR/dotfiles/waybar/.config/waybar"
-WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island.git"
-WAYBAR_ISLAND_NAME="waybar-island"
+# WAYBAR_ISLAND_DIR="$HOME_DIR/dotfiles/waybar/.config/waybar"
+# WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island.git"#
+# WAYBAR_ISLAND_NAME="waybar-island"
 
 CONFIGS=(fastfetch fish ghostty hypr nvim opencode swayosd uwsm waybar voxtype)
 
@@ -51,16 +51,16 @@ else
   fi
 fi
 
-# Add waybar island
-echo "==> Cloning waybar island into waybar folder as alternative"
-if [ -d "$WAYBAR_ISLAND_DIR/$WAYBAR_ISLAND_NAME" ]; then
-  echo "$WAYBAR_ISLAND_NAME already exists. Skipping clone"
-else
-  mkdir -p "$WAYBAR_ISLAND_DIR"
-  if ! git clone "$WAYBAR_ISLAND_REPO_URL" "$WAYBAR_ISLAND_DIR/$WAYBAR_ISLAND_NAME"; then  
-    echo "Failed to clone waybar island."
-  fi
-fi
+# # Add waybar island
+# echo "==> Cloning waybar island into waybar folder as alternative"
+# if [ -d "$WAYBAR_ISLAND_DIR/$WAYBAR_ISLAND_NAME" ]; then
+#   echo "$WAYBAR_ISLAND_NAME already exists. Skipping clone"
+# else
+#   mkdir -p "$WAYBAR_ISLAND_DIR"
+#   if ! git clone "$WAYBAR_ISLAND_REPO_URL" "$WAYBAR_ISLAND_DIR/$WAYBAR_ISLAND_NAME"; then  
+#     echo "Failed to clone waybar island."
+#   fi
+# fi
 
 # Recreate nvim's theme.lua link — stow installs the repo's copy verbatim,
 # and that copy is stale/broken (trailing newlines in the target)
