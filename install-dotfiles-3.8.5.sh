@@ -2,15 +2,15 @@
 
 HOME_DIR=$HOME
 
-DOTFILES_REPO_URL="https://github.com/0leodev/dotfiles"
+DOTFILES_REPO_URL="https://github.com/0leodev/dotfiles-3.8.5"
 DOTFILES_REPO_NAME="dotfiles"
 
 THEME_DIR="$HOME_DIR/.config/omarchy/themes"
-THEME_REPO_URL="https://github.com/0leodev/omarchy-0xleovision-theme.git"
+THEME_REPO_URL="https://github.com/0leodev/omarchy-0xleovision-theme-3.8.5.git"
 THEME_NAME="0xleovision"
 
 # WAYBAR_ISLAND_DIR="$HOME_DIR/dotfiles/waybar/.config/waybar"
-# WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island.git"#
+# WAYBAR_ISLAND_REPO_URL="https://github.com/0leodev/omarchy-waybar-island-3.8.5.git"
 # WAYBAR_ISLAND_NAME="waybar-island"
 
 CONFIGS=(fastfetch fish ghostty hypr nvim opencode swayosd uwsm waybar voxtype)
