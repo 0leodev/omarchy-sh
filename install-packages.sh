@@ -41,7 +41,14 @@ if [[ "$SHELL" != "/usr/bin/fish" ]]; then
 fi
 
 echo "==> Set Brave Origin as default"
-omarchy default browser brave-origin
+BRAVE_DESKTOP="brave-origin-beta.desktop"
+if [[ -e "/usr/share/applications/$BRAVE_DESKTOP" ]]; then
+  if [[ "$(env -u BROWSER xdg-settings get default-web-browser)" != *"$BRAVE_DESKTOP"* ]]; then
+    env -u BROWSER xdg-settings set default-web-browser "$BRAVE_DESKTOP"
+  fi
+else
+  echo "    $BRAVE_DESKTOP not found, skipping default browser"
+fi
 
 echo "==> Done. All personal packages installed."
 echo "Log out and back in (or start a new session)."
