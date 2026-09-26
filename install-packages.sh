@@ -7,7 +7,7 @@ AUR_PKGS=(visual-studio-code-bin brave-origin-beta-bin voxtype-bin)
 
 # Sync package databases first
 echo "==> Syncing package databases"
-sudo pacman -Syu
+omarchy update -y
 
 # Install Arch's official repo packages
 echo "==> Installing repo packages: ${REPO_PKGS[*]}"
@@ -41,10 +41,7 @@ if [[ "$SHELL" != "/usr/bin/fish" ]]; then
 fi
 
 echo "==> Set Brave Origin as default"
-if command -v brave-origin-beta; then
-  xdg-settings set default-web-browser brave-origin-beta.desktop
-  xdg-mime default brave-origin-beta.desktop text/html
-fi
+omarchy default browser brave-origin
 
 echo "==> Done. All personal packages installed."
 echo "Log out and back in (or start a new session)."
