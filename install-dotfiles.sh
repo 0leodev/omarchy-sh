@@ -40,6 +40,7 @@ if [ -d "$THEME_DIR/$THEME_NAME" ]; then
 else
   mkdir -p "$THEME_DIR"
   if git clone "$THEME_REPO_URL" "$THEME_DIR/$THEME_NAME"; then
+    rm -rf "$THEME_DIR/$THEME_NAME/.git"
     omarchy theme set "$THEME_NAME" >/dev/null
   else  
     echo "Failed to clone theme."
