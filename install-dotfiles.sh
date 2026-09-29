@@ -52,3 +52,6 @@ fi
 echo "==> Fixing nvim theme link"
 ln -sfn "$HOME_DIR/.local/state/omarchy/current/theme/neovim.lua" \
   "$HOME_DIR/.config/nvim/lua/plugins/theme.lua"
+
+# Make cpu script is executable
+chmod +x ~/.config/omarchy/bar/scripts/cpu
