@@ -32,7 +32,7 @@ if [[ -n "$(command -v voxtype)" ]]; then
 fi
 
 echo "==> Install & set Ghostty as default"
-omarchy-install-terminal ghostty
+omarchy install terminal ghostty
 
 echo "==> Set Fish as default"
 if [[ "$SHELL" != "/usr/bin/fish" ]]; then
@@ -47,7 +47,13 @@ if [[ -e "/usr/share/applications/$BRAVE_DESKTOP" ]]; then
     env -u BROWSER xdg-settings set default-web-browser "$BRAVE_DESKTOP"
   fi
 else
-  echo "    $BRAVE_DESKTOP not found, skipping default browser"
+  echo "$BRAVE_DESKTOP not found, skipping default browser"
+fi
+
+echo "==> Set imv-dir as default image viewer"
+if [[ -e /usr/share/applications/imv-dir.desktop ]]; then
+  xdg-mime default imv-dir.desktop \
+    $(grep -oP '(?<=^MimeType=).*' /usr/share/applications/imv-dir.desktop | tr ';' ' ')
 fi
 
 echo "==> Done. All personal packages installed."
