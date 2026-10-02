@@ -1,8 +1,4 @@
-# omarchy-sh
-
-Shell scripts for fast personal setup.
-
-## Installation
+# Installation
 
 ```bash
 cd ~
