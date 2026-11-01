@@ -9,7 +9,7 @@ THEME_DIR="$HOME_DIR/.config/omarchy/themes"
 THEME_REPO_URL="https://github.com/0leodev/omarchy-0xleovision-theme"
 THEME_NAME="0xleovision"
 
-CONFIGS=(fastfetch fish ghostty hypr nvim omarchy opencode uwsm voxtype)
+CONFIGS=(fastfetch fish ghostty hypr nvim omarchy opencode uwsm voxtype gtk-4.0)
 
 echo "==> Installing stow"
 sudo pacman -S --needed --noconfirm stow
