@@ -42,18 +42,19 @@ fi
 
 echo "==> Set Brave Origin as default"
 BRAVE_DESKTOP="brave-origin-beta.desktop"
-if [[ -e "/usr/share/applications/$BRAVE_DESKTOP" ]]; then
-  if [[ "$(env -u BROWSER xdg-settings get default-web-browser)" != *"$BRAVE_DESKTOP"* ]]; then
-    env -u BROWSER xdg-settings set default-web-browser "$BRAVE_DESKTOP"
-  fi
-else
-  echo "$BRAVE_DESKTOP not found, skipping default browser"
+if [[ -f "/usr/share/applications/$BRAVE_DESKTOP" ]]; then
+    xdg-settings set default-web-browser "$BRAVE_DESKTOP" || true
+    xdg-mime default "$BRAVE_DESKTOP" x-scheme-handler/http || true
+    xdg-mime default "$BRAVE_DESKTOP" x-scheme-handler/https || true
 fi
 
 echo "==> Set imv-dir as default image viewer"
-if [[ -e /usr/share/applications/imv-dir.desktop ]]; then
-  xdg-mime default imv-dir.desktop \
-    $(grep -oP '(?<=^MimeType=).*' /usr/share/applications/imv-dir.desktop | tr ';' ' ')
+IMV_DESKTOP="/usr/share/applications/imv-dir.desktop"
+if [[ -f "$IMV_DESKTOP" ]]; then
+    MIMES=$(grep -oP '(?<=^MimeType=).*' "$IMV_DESKTOP" | tr ';' ' ')
+    for mime in $MIMES; do
+        xdg-mime default imv-dir.desktop "$mime" || true
+    done
 fi
 
 echo "==> Done. All personal packages installed."
