@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Custom packages 
 REPO_PKGS=(flatpak omarchy-fish)
-AUR_PKGS=(visual-studio-code-bin brave-origin-beta-bin voxtype-bin)
+AUR_PKGS=(visual-studio-code-bin brave-origin-beta-bin voxtype-bin kilo-bin)
 
 # Sync package databases first
 echo "==> Syncing package databases"
